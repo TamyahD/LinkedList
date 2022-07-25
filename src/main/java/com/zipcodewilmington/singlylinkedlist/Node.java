@@ -1,24 +1,29 @@
 package com.zipcodewilmington.singlylinkedlist;
 
-public class Node {
+ class Node {
     Integer nodeValue;
-    Boolean hasNextNode;
     Node nextNode;
+//    Boolean hasNextNode;
 
     Node() {
 
     }
-    Node(Integer value, boolean hasNextNode, Node nextNode) {
-        this.nodeValue=value;
-        this.hasNextNode=hasNextNode;
-        this.nextNode = nextNode;
-    }
+//    Node(Integer value, Node nextNode) {
+//        this.nodeValue=value;
+//        this.nextNode = nextNode;
+//        this.hasNextNode=hasNextNode;
+//    }
 //    Node(Integer value, Node nextNode) {
 //        this.nodeValue=value;
 //        this.nextNode=nextNode;
 //    }
     Node(Integer value) {
         this.nodeValue=value;
-        this.nextNode = null;
+//        this.nextNode = null;
+    }
+
+    @Override
+    public String toString() {
+        return nodeValue.toString();
     }
 }

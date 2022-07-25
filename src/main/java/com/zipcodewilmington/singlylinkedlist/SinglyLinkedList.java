@@ -13,7 +13,17 @@ public class SinglyLinkedList {
 
 
     public void add(Integer newNodeValue) {
-        Node newNode = new Node(newNodeValue);
+        if (headNode==null) {
+            headNode = new Node(newNodeValue);
+            tailNode = headNode;
+            tailNode.nextNode = new Node(null);
+        }
+        else {
+            tailNode.nextNode = new Node(newNodeValue);
+            tailNode = tailNode.nextNode;
+            tailNode.nextNode = new Node(null);
+        }
+/*
         if (headNode==null && tailNode==null) {
             headNode=newNode;
             tailNode=newNode;
@@ -22,11 +32,27 @@ public class SinglyLinkedList {
             tailNode.nextNode = newNode;
             tailNode = newNode;
         }
+*/
+    }
+    public boolean contains(Node node) {
+//        for (Node n : SinglyLinkedList) {
+//            if (n.nodeValue ==node
+//        }
+        return false;
     }
     void remove(Integer nodeIndexValue) {}
-    boolean contains(Node node) {return false;}
     Integer find(Integer nodeIndexValue) {return -1;}
-    Integer size(SinglyLinkedList singlyLinkedList) {return 0;}
+
+    Integer size() {
+        int size=0;
+        Node currentNode = headNode;
+        while (currentNode !=null) {
+            size++;
+            currentNode = currentNode.nextNode;
+        }
+        return size-1;
+    }
+
     Integer get(Integer nodeIndexValue) {return 0;}
     SinglyLinkedList copy(SinglyLinkedList singlyLinkedList) {return null;}
     SinglyLinkedList sort(SinglyLinkedList singlyLinkedList) {return null;}
