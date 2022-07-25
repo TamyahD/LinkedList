@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f0c6f35-1ac5-49ea-b41e-20445c07c5c6" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,18 +157,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/myah/Dev/LinkedList&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "last_opened_file_path": "/Users/myah/Dev/LinkedList",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.zipcodewilmington.singlylinkedlist" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SinglyLinkedListTest">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -234,6 +248,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SinglyLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="singlylinkedlist" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zipcodewilmington.singlylinkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
+      <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -267,6 +297,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SinglyLinkedListTest" />
         <item itemvalue="Application.MainApplication" />
       </list>
     </recent_temporary>
@@ -281,7 +312,7 @@
       <updated>1515621994762</updated>
       <workItem from="1658671924286" duration="7293000" />
       <workItem from="1658698756928" duration="5653000" />
-      <workItem from="1658754795677" duration="4246000" />
+      <workItem from="1658754795677" duration="11544000" />
     </task>
     <servers />
   </component>

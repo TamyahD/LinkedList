@@ -6,6 +6,7 @@ package com.zipcodewilmington.singlylinkedlist;
 public class SinglyLinkedList {
     Node headNode;
     Node tailNode;
+    Node currentNode;
 
     public SinglyLinkedList() {
 
@@ -13,6 +14,11 @@ public class SinglyLinkedList {
 
 
     public void add(Integer newNodeValue) {
+/*
+        if head node is null, then priorize using headNode when adding new nodes
+        tail node will also equal head node
+        next node after tail/head will be empty aka null
+*/
         if (headNode==null) {
             headNode = new Node(newNodeValue);
             tailNode = headNode;
@@ -23,37 +29,59 @@ public class SinglyLinkedList {
             tailNode = tailNode.nextNode;
             tailNode.nextNode = new Node(null);
         }
-/*
-        if (headNode==null && tailNode==null) {
-            headNode=newNode;
-            tailNode=newNode;
-        }
-        else {
-            tailNode.nextNode = newNode;
-            tailNode = newNode;
-        }
-*/
     }
-    public boolean contains(Node node) {
-//        for (Node n : SinglyLinkedList) {
-//            if (n.nodeValue ==node
-//        }
+
+    public boolean contains(Integer nodeValue) {
+        currentNode = headNode;
+        while (currentNode != null) {
+            if (currentNode.nodeValue.equals(nodeValue)) {
+                return true;
+            }
+            if (currentNode.nextNode != null) {
+                currentNode = currentNode.nextNode;
+            }
+            if (currentNode.nextNode == null) {
+                return false;
+            }
+        }
         return false;
     }
+
     void remove(Integer nodeIndexValue) {}
     Integer find(Integer nodeIndexValue) {return -1;}
 
+    /*TODO add comments*/
     Integer size() {
-        int size=0;
+        int size=-1;
         Node currentNode = headNode;
         while (currentNode !=null) {
             size++;
-            currentNode = currentNode.nextNode;
+            if (currentNode.nextNode != null) {
+                currentNode = currentNode.nextNode;
+            }
+            else {
+                break;
+            }
         }
-        return size-1;
+        return size;
     }
 
-    Integer get(Integer nodeIndexValue) {return 0;}
+    /*TODO add comments*/
+    Node get(Integer nodeIndexValue) {
+        while (headNode != null) {
+            currentNode = headNode;
+            for (int indexCounter=0; indexCounter<=size(); indexCounter++) {
+               if (indexCounter == nodeIndexValue) {
+                   return currentNode;
+               }
+               else {
+                   currentNode = currentNode.nextNode;
+               }
+            }
+        }
+        return null;
+    }
+
     SinglyLinkedList copy(SinglyLinkedList singlyLinkedList) {return null;}
     SinglyLinkedList sort(SinglyLinkedList singlyLinkedList) {return null;}
 }
