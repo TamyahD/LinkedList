@@ -7,9 +7,10 @@ public class SinglyLinkedList {
     Node headNode;
     Node tailNode;
     Node currentNode;
+    Integer size;
 
     public SinglyLinkedList() {
-
+        this.size=size();
     }
 
 
@@ -31,6 +32,7 @@ public class SinglyLinkedList {
         }
     }
 
+    /*TODO add comments*/
     public boolean contains(Integer nodeValue) {
         currentNode = headNode;
         while (currentNode != null) {
@@ -47,23 +49,21 @@ public class SinglyLinkedList {
         return false;
     }
 
-    void remove(Integer nodeIndexValue) {}
-    Integer find(Integer nodeIndexValue) {return -1;}
-
     /*TODO add comments*/
     Integer size() {
-        int size=-1;
-        Node currentNode = headNode;
+        int size=0;
+        currentNode = headNode;
         while (currentNode !=null) {
             size++;
-            if (currentNode.nextNode != null) {
+            if (currentNode.nextNode.nodeValue != null) {
                 currentNode = currentNode.nextNode;
             }
             else {
+                size--;
                 break;
             }
         }
-        return size;
+        return this.size=size;
     }
 
     /*TODO add comments*/
@@ -82,6 +82,23 @@ public class SinglyLinkedList {
         return null;
     }
 
+    void remove(Integer nodeIndexValue) {
+        while (headNode != null) {
+            currentNode = headNode;
+            for (int index=1; index<=nodeIndexValue; index++) {
+                currentNode=currentNode.nextNode;
+                if(index==nodeIndexValue) {
+                    currentNode=new Node(null);
+                    currentNode=tailNode.nextNode;
+                    this.size--;
+                }
+//                    break;
+            }
+            break;
+        }
+    }
+
+    Integer find(Integer nodeIndexValue) {return -1;}
     SinglyLinkedList copy(SinglyLinkedList singlyLinkedList) {return null;}
     SinglyLinkedList sort(SinglyLinkedList singlyLinkedList) {return null;}
 }

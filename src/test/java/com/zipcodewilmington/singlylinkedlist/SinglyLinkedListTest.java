@@ -91,4 +91,25 @@ public class SinglyLinkedListTest {
         // Then
         assertEquals(expectedForFindingNodeValue80, actualForFindingNodeValue80);
     }
+
+    @Test
+    public void testFindElementAndReturnTheIndex() {
+        // Given
+        singlyLinkedList.add(866);
+        singlyLinkedList.add(28);
+        singlyLinkedList.add(3);
+        singlyLinkedList.add(55);
+        singlyLinkedList.add(193);
+        // When
+        singlyLinkedList.remove(3);
+        Integer expectedListSize = 4;
+        Integer actualListSize = singlyLinkedList.size();
+//        singlyLinkedList.size();
+//        Integer expected = 3;
+//        Integer actual = singlyLinkedList.find(3);
+        // Then
+        assertEquals(expectedListSize, actualListSize);
+
+    }
+
 }
