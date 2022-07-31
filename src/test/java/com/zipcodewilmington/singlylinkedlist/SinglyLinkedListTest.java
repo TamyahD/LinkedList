@@ -16,7 +16,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    public void testInitialStateOfList() {
+    public void testInitialEmptyList() {
         // Given
         // When
         Node actual = singlyLinkedList.headNode;
@@ -32,6 +32,8 @@ public class SinglyLinkedListTest {
         Node actual = singlyLinkedList.headNode;
         // Then
         assertNotNull(actual);
+//        singlyLinkedList.getSize();
+        assertEquals(1, (int) singlyLinkedList.getSize());
     }
 
     @Test
@@ -42,7 +44,7 @@ public class SinglyLinkedListTest {
         singlyLinkedList.add(209);
         singlyLinkedList.add(83);
         Integer expected = 3;
-        Integer actual = singlyLinkedList.size();
+        Integer actual = singlyLinkedList.getSize();
         // Then
         assertEquals(expected,actual);
     }
@@ -55,7 +57,7 @@ public class SinglyLinkedListTest {
         singlyLinkedList.add(83);
         // When
         Integer expected = 83;
-        Integer actual = singlyLinkedList.get(singlyLinkedList.size()-1).nodeValue;
+        Integer actual = singlyLinkedList.get(2).nodeValue;
         // Then
         assertEquals(expected, actual);
     }
@@ -93,7 +95,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    public void testFindElementAndReturnTheIndex() {
+    public void testFindIndexAndReturnElement() {
         // Given
         singlyLinkedList.add(866);
         singlyLinkedList.add(28);
@@ -102,14 +104,11 @@ public class SinglyLinkedListTest {
         singlyLinkedList.add(193);
         // When
         singlyLinkedList.remove(3);
-        Integer expectedListSize = 4;
-        Integer actualListSize = singlyLinkedList.size();
-//        singlyLinkedList.size();
-//        Integer expected = 3;
-//        Integer actual = singlyLinkedList.find(3);
-        // Then
-        assertEquals(expectedListSize, actualListSize);
-
+        Integer expectedSize = 4;
+        Integer actualSize = singlyLinkedList.getSize();
+        assertEquals(expectedSize, actualSize);
+        assertFalse(singlyLinkedList.contains(55));
+//        assertEquals(expectedHeadNode,actualHeadNode);
     }
 
 }
